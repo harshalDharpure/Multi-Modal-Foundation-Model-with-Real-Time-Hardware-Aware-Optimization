@@ -1,0 +1,58 @@
+You are an AI coding assistant. I want to build a **Multi-Modal Foundation Model with Real-Time Hardware-Aware Optimization**, combining text, image, and video modalities. Generate a complete Python project scaffold that includes:
+
+1. **Environment Setup**
+   - Virtual environment
+   - Install dependencies: PyTorch, Transformers, Sentence-Transformers, FAISS, RDFLib, OpenVINO, ONNX Runtime, DeepSpeed, Streamlit/Gradio, PyTorchVideo, OpenCLIP, Stable Diffusion
+
+2. **Data Preprocessing**
+   - Load multi-format documents (PDF, CSV, DOCX) for text
+   - Load image datasets (PNG, JPG)
+   - Load video datasets and extract frames
+   - Preprocess and normalize all modalities
+
+3. **Multi-Modal Embeddings**
+   - Generate embeddings for text using LLMs or SentenceTransformers
+   - Generate embeddings for images using CLIP / Vision Transformers
+   - Generate embeddings for video frames using video transformers or frame-level CLIP
+   - Combine embeddings into unified multi-modal vectors
+
+4. **Vector Search & Knowledge Graph**
+   - Build FAISS index for multi-modal embeddings
+   - Create a Knowledge Graph using RDFLib/Neo4j
+   - Query KG to enrich context for RAG pipeline
+
+5. **RAG + Multi-Modal Generation**
+   - Implement a pipeline that takes user input (question or prompt) and retrieves relevant embeddings across modalities
+   - Use LLaMA-3 / GPT-style model for text generation
+   - Use Stable Diffusion / video diffusion models for image/video generation
+   - Combine retrieved context + KG reasoning for multi-modal generation
+
+6. **Model Optimization & Multi-Device Deployment**
+   - Convert models to ONNX / OpenVINO IR format
+   - Apply int4 / int8 / BF16 / FP8 quantization
+   - Enable multi-device inference: CPU, GPU, NPU
+   - Include performance profiling (VTune, SocWatch)
+
+7. **Benchmarking & Metrics**
+   - Measure latency, throughput, memory usage, and power consumption
+   - Compare baseline vs optimized models
+   - Log metrics using MLflow or W&B
+
+8. **Web Demo**
+   - Build Streamlit or Gradio app
+   - Allow user to upload documents, images, or videos
+   - Ask questions or give prompts and show generated text, image, or video
+   - Include visualization of retrieved context or knowledge graph
+
+9. **Project Structure**
+   - Folders: docs/, images/, videos/, scripts/, models/, outputs/
+   - README with instructions for setup, running, and demo
+   - Modular scripts: preprocessing.py, embeddings.py, rag_pipeline.py, kg.py, optimization.py, demo.py
+
+10. **Optional**
+   - Dockerfile for containerized deployment
+   - Kubernetes configs for scaling multi-device inference
+   - Example dataset placeholders for text, images, and videos
+   - Example queries and demo outputs
+
+Generate **fully-commented Python code** for all steps, modularized into scripts, with placeholders for datasets and publicly available models. Include example runs and demo snippets.
